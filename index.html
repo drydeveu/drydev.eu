@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
+    <meta http-equiv="imagetoolbar" content="no" />
+    <title>Leandro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Set Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Leandro S.">
+    <meta property="og:title" content="Leandro - Programmierer">
+    <meta property="og:description" content="Ich bin Leandro und programmiere als Hobby mit Python und mit Lua. und natürlich auch HTML und CSS">
+    <meta property="og:image" content="https://drydev.eu/img/logo.png">
+
+    <script src="src/partikel.js">
+    </script>
+</head>
+<body class="body">
+
+    <div class="logo">
+        <img src="img/logo.png" alt="logo" galleryimg="no">
+    </div>
+
+    <div class="text-title">
+        <a>Lndr</a>
+    </div>
+
+    <div class="text">
+        <a>Ich bin Leandro und programmiere<br>als Hobby mit <a class="text-link">Python</a> und mit <a class="text-link">Lua</a>.</a><br>
+        <a>und natürlich auch <a class="text-link" >HTML</a> und <a class="text-link">CSS</a></a>
+    </div>
+    <br>
+    <br>
+    <div class="text-title">
+        <a>Projekte</a>
+    </div>
+    <div class="text">
+        <a>Discord Server - </a><a class="text-link" href="https://discord.gg/hypecord" target="_blank">Hypecord</a><br><br>
+        <a>Fun API - </a><a class="text-link" href="https://github.com/drydeveu/lndr-api" target="_blank">lndr-api</a><br><br>
+        </div>
+
+</body>
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+<script>
+    var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+
+function mischandler(){
+return false;
+}
+
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+
+document.onkeydown=function(e)
+{
+if(e.which == 17)
+isCtrl=true;
+if(((e.which == 85) || (e.which == 117) || (e.which == 65) || (e.which == 97) || (e.which == 67) || (e.which == 99)) && isCtrl == true)
+{
+// alert(‘Keyboard shortcuts are cool!’);
+return false;
+}
+}
+</script>
+</html>
